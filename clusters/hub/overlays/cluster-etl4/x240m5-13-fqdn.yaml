@@ -4,8 +4,8 @@ metadata:
   name: x240m5-13-dns-entry
 spec:
   endpoints:
-  - dnsName: x240m5-13.etl6.${PLATFORM_BASE_DOMAIN}
+  - dnsName: openshift-master-1.ocp-edge1.${PLATFORM_BASE_DOMAIN}
     recordTTL: 180
     recordType: A
     targets:
-    - 10.9.51.153
+    - 10.46.57.22

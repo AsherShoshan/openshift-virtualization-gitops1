@@ -1,4 +1,4 @@
-# Create cluster etl6
+# Create cluster etl4
 
 for now we create the needed secret manually (they will not be present in the git repository), use the following templates:
 
@@ -20,7 +20,7 @@ and the pull secret:
 kind: Secret
 apiVersion: v1
 metadata:
-  name: pullsecret-etl6
+  name: pullsecret-etl4
 stringData:
   '.dockerconfigjson': '<pull-secret>'
 type: 'kubernetes.io/dockerconfigjson'

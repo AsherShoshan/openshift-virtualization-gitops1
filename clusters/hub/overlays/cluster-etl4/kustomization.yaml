@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - ./namespace.yaml       
+  - ./namespace.yaml
   - ./x240m5-11-baremetal-host.yaml
   - ./x240m5-12-baremetal-host.yaml
   - ./x240m5-13-baremetal-host.yaml
@@ -22,16 +22,16 @@ helmCharts:
     namespace: etl4
     valuesInline:
       clusterSet: default  
-      location: oystein-lab
+      location: default
       workerNumber: 0
       imageSet: img4.17.2-x86-64-appsub
       mastersSchedulable: true
-      sshKey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCWVnOEYFaN6tp/CXn5aBgD5YZbbwJHhUYbAahoGz3IbP8YZZwyBvJvgy9CujKTaIpZHweYRwMEtvPaX65g8AQDd8t6Gqc+JVJue6HTqrawH2wvq8Qdhip9L09fK2WqtP7UbVF+fgiwm9kebajkAqtlOttcdHipeRy5TGVE2hbV1zqc6UjTo6lKzxflm2Jd5EMc4TZCleSFApBod+jgFZoke/8Q/GHWyQs7YaoE3h/JND7z6aye5HoAPQBT18y/4Amwj7h2hIcIsSJ8JAHsOZ0NB4gz1qwpkG/dYAYV1iARM/+qnZ7EJAt4DofqUAS1/0BdXK+1RL8uI0db4r8U3pTe+oFGORQHRNa+ehDoX1PdOU+o59OmjEaJpcq0YRB3NqOwfZzATUfOqcZswH0xC6WKi/UknBFPgJv6JfD0+dee/kWTmgFrzT6Ie9hRql2bA+qjSoPfWzPk+Gv1Wuf6UGdC2DpKPO+vOhVzRtog/cvwjGSJv5p2X6biRGiYy8a0bX0= rspazzol@rspazzol
+      sshKey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDm9hb6iTZJypEmzg4IZ767ze60UGhBWnjPXhovWVB7uKputdLzZhmlo36ifkXr/DTk8NGm47r6kXmz9NAF0pDHa5jX6yJFnhS4z5NY/mzsUX41gwiqBKYHgdp/KE1ylE8mbNon5ZpaaGvb876myjjPjPwWsD8hvXZirA5Q8TfDb/Pvgy1dhVH/uN05Ip1vVsp+bFGMPUJVWVUy/Eby5xW6OJv+FBOQq4nu6tslDZlHYXX2TSGrlW4x0i/oQMpKu/Y8ygAdjWqmAy6UBcho1nNWy15cp0jI5Fhjze171vSWZLAqJY+eFcL2kt/09RnY+MXyY/tIf+qNMyBE2Qltigah
       networking:
-        podCIDR: 10.136.0.0/14
+        podCIDR: 10.128.0.0/14
         serviceCIDR: 172.32.0.0/16
-        ingressVIP: "10.9.51.154"
-        apiVIP: "10.9.51.155"      
+        ingressVIP: "10.46.57.10"
+        apiVIP: "10.46.57.11"      
 
   - name: cluster-registration
     releaseName: etl4

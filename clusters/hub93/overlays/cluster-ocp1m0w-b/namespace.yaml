@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ocp1m0w-b
+  labels:
+    name: "ocp1m0w-b"
+
